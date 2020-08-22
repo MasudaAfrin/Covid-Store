@@ -6,4 +6,5 @@
 **1.Add-to-Cart**: It is done by vanilla JS from scratch.<br>
 **2.Button-Filter**: It is done by JS and JQuery to show the products according to their category.<br>
 **3.LightBox**: It is built by Jquery plugin-"Magnific Popup".<br>
+**4.Search**: It is built by Vanilla JS.<br>
 Besides this project also contains responsive and sticky navbar.<br>
