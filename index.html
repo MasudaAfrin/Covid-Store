@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- font link -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!--magnify popup plugin-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <!-- Fontawesome CSS -->
     <script src="https://kit.fontawesome.com/d1a487ebd2.js"></script>
     <!-- Custom CSS -->
@@ -61,15 +63,34 @@
                         <h1 class="text-uppercase">Welcome to <strong>Covid </strong>Store</h1>
                         <a href="#" class="btn btn-danger">Shop Now</a>
                     </div>
+                     <!-- banner content part ends-->
                 </div>
+                <!-- cart content part for add-to-cart-->
+                <div id="cart" class="cart">
+                    <div class="cart-item d-flex justify-content-around align-items-center">
+                        <img src="images/mask-1.jpg" class="rounded-circle" id="item-img" alt="cart-img" width="50px" height="50px">
+                        <!-- detail -->
+                        <div class="cart-item-text d-flex">
+                         <p id="cart-item-title" class="mb-0 text-capitalize">Surgical Mask with Nosebar &nbsp-
+                         </p>
+                         <span>&nbsp &#x9f3</span>
+                         <span class="cart-item-price mb-0" id="cart-item-price">10</span>
+                        </div>
+                        <a href="" class="cart-item-remove" id="cart=item-remove"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                    <!-- for total -->
+                    <div class="cart-total-container d-flex justify-content-around">
+                        <h5>Total</h5>
+                        <h5>&#x9f3<span id="cart-total">8</span></h5>
+                    </div>
+                    <!--cart control-->
+                    <div class="cart-control d-flex justify-content-around">
+                        <a href="" id="cart-items-clear" class="btn btn-outline-danger">Clear All</a>
+                        <a href="" id="checkout" class=" btn btn-outline-danger">Proceed</a>
+                    </div>
+                   </div>
+                     <!-- cart content part for add-to-cart ends-->
               </div>
-               <!-- banner content part ends-->
-
-               <!-- cart content part for add-to-cart-->
-              <div id="cart" class="cart">
-               
-              </div>
-               <!-- cart content part for add-to-cart ends-->
           </div>
           <!-- banner ends -->
     </header>
@@ -110,136 +131,32 @@
             <!-- store filter button starts -->
             <div class="row justify-content-center">
                 <div class="col col-md-12 col-lg-7 col-xl-7 mx-auto sortBtn d-flex justify-content-around my-4 flex-wrap">
-                    <!-- //filter add kora baki -->
-                    <a href="" class="btn btn-outline-danger">All</a>
-                    <a href="" class="btn btn-outline-danger">Surgical Mask</a>
-                    <a href="" class="btn btn-outline-danger">KN95 Mask</a>
-                    <a href="" class="btn btn-outline-danger">Gloves</a>
-                    <a href="" class="btn btn-outline-danger">PPE</a>
-                    <a href="" class="btn btn-outline-danger">Sanitizer</a>
+                    
+                    <button class="btn btn-outline-danger filter-btn active" data-id="all" id="btns">All</button>
+                    <button class="btn btn-outline-danger filter-btn" data-id="mask">Mask</button>
+                    <button class="btn btn-outline-danger filter-btn" data-id="glove">Gloves</button>
+                    <button class="btn btn-outline-danger filter-btn" data-id="ppe">PPE</button>
+                    <button class="btn btn-outline-danger filter-btn" data-id="sanitizer">Sanitizer</button>
                     
                 </div>
             </div>
             <!-- store filter button ends -->
 
             <!-- search starts -->
-            <div class="row store-items" id="store-items">
-                <div class="col col-md-12 col-lg-5 col-xl-5 mx-auto">
-                    <form>
+            <div class="row">
+                <div class="col col-md-10 col-lg-5 col-xl-5 mx-auto">
                         <div class="input-group mb-3">
                           <div class="input-group-prepend">
                             <span class="input-group-text search-box" id="search-icon"><i class="fas fa-search"></i></span>
                           </div>
-                          <input type="text" class="form-control input-style" placeholder='Search Product...' id="search-item">
+                          <input type="text" class="form-control input-style" placeholder='Search Product...' id="search-item" name="search">
                         </div>
-                      </form>
                 </div>
             </div>
             <!-- search ends -->
 
             <!-- items here -->
             <div class="row my-3 store-items" id="store-items">
-                <!-- 1st item -->
-                <div class="col col-md-6 col-lg-4 col-xl-4 my-3 store-item surgical-mask" data-item="surgical-mask">
-                    <div class="card">
-                       <div class="img-container">
-                        <img src="images/mask-1.jpg" class="card-img-top store-img" alt="mask1">
-                        <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
-                       </div>
-                        <div class="card-body bg-color">
-                            <div class="card-text d-flex justify-content-between text-capitalize">
-                                <h5 id="store-item-name">Surgical Mask Without Nosebar</h5>
-                                <h5 class="store-item-value">&#x9f3 <strong id="store-item-price" class="font-weight-bold">10</strong></h5>
-                              </div>
-                        </div>
-                      </div>
-                </div>
-                <!-- 1st item -->
-
-                <!-- 2nd item -->
-                <div class="col col-md-6 col-lg-4 col-xl-4 my-3 store-item surgical-mask" data-item="surgical-mask">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/mask-2.jpg" class="card-img-top store-img" alt="mask2" height="274px">
-                            <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
-                        </div>
-                        <div class="card-body bg-color">
-                            <div class="card-text d-flex justify-content-between text-capitalize">
-                                <h5 id="store-item-name">Surgical Mask With Nosebar</h5>
-                                <h5 class="store-item-value">&#x9f3 <strong id="store-item-price" class="font-weight-bold">12</strong></h5>
-                              </div>
-                        </div>
-                      </div>
-                </div>
-                <!-- 2nd item -->
-
-                <!-- 3rd item -->
-                <div class="col col-md-6 col-lg-4 col-xl-4 my-3 store-item KN95-mask" data-item="KN95-mask">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/mask-3.jpg" class="card-img-top store-img" alt="mask3" height="274px">
-                            <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
-                        </div>
-                        <div class="card-body bg-color">
-                            <div class="card-text d-flex justify-content-between text-capitalize">
-                                <h5 id="store-item-name">KN-95 Mask</h5>
-                                <h5 class="store-item-value">&#x9f3 <strong id="store-item-price" class="font-weight-bold">550</strong></h5>
-                              </div>
-                        </div>
-                      </div>
-                </div>
-                <!-- 3rd item -->
-
-                <!-- 4th item -->
-                <div class="col col-md-6 col-lg-4 col-xl-4 my-3 store-item ppe" data-item="ppe">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/ppe.jpg" class="card-img-top store-img" alt="ppe" height="274px">
-                            <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
-                        </div>
-                        <div class="card-body bg-color">
-                            <div class="card-text d-flex justify-content-between text-capitalize">
-                                <h5 id="store-item-name">PPE</h5>
-                                <h5 class="store-item-value">&#x9f3 <strong id="store-item-price" class="font-weight-bold">2500</strong></h5>
-                              </div>
-                        </div>
-                      </div>
-                </div>
-                <!-- 4th item -->
-
-                <!-- 5th item -->
-                <div class="col col-md-6 col-lg-4 col-xl-4 my-3 store-item glove" data-item="glove">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/glove.jpg" class="card-img-top store-img" alt="glove" height="274px">
-                            <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
-                        </div>
-                        <div class="card-body bg-color">
-                            <div class="card-text d-flex justify-content-between text-capitalize">
-                                <h5 id="store-item-name">Surgical Gloves</h5>
-                                <h5 class="store-item-value">&#x9f3 <strong id="store-item-price" class="font-weight-bold">20</strong></h5>
-                              </div>
-                        </div>
-                      </div>
-                </div>
-                <!-- 5th item -->
-
-                <!-- 6th item -->
-                <div class="col col-md-6 col-lg-4 col-xl-4 my-3 store-item handsanitizer" data-item="handsanitizer">
-                    <div class="card">
-                        <div class="img-container">
-                            <img src="images/handsanitizer.jpg" class="card-img-top store-img" alt="handsanitizer" height="274px">
-                            <span class="store-item-icon"><i class="fas fa-shopping-cart"></i></span>
-                        </div>
-                        <div class="card-body bg-color">
-                            <div class="card-text d-flex justify-content-between text-capitalize">
-                                <h5 id="store-item-name">Hand Sanitizer</h5>
-                                <h5 class="store-item-value">&#x9f3 <strong id="store-item-price" class="font-weight-bold">120</strong></h5>
-                              </div>
-                        </div>
-                      </div>
-                </div>
-                <!-- 6th item -->
             </div>
             <!-- items here -->
         </div>
@@ -249,8 +166,15 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!--cart functionality-->
+    <script src="js/app.js"></script>
+    <!-- default behaviour -->
+    <script src="js/main.js"></script>
+    <!--product-filter-->
+    <script src="js/product-filter.js"></script>
   </body>
 </html>
