@@ -32,6 +32,9 @@ h1,h2,h3,h4,h5,h6{
     background-color:rgba(131, 11, 21, 1.0) !important;
     border-radius: 4px;
 }
+.cart-info-mobile{
+    display: none !important;
+   }
 .active .nav-link{
     color: white !important;
 }
@@ -280,4 +283,32 @@ nav{
     z-index: 5;
     height: 75px;
     transition: all 2s;
+}
+
+@media screen and (max-width: 992px) {
+   .cart-info-mobile{
+    display: block !important;
+    float: left;
+    padding: 5px;
+    border: 2px solid rgba(131, 11, 21, 1.0);
+    border-radius: 4px;
+   }
+   .cart-info-icon{
+       float: left;
+   }
+   .cart-info-mobile p{
+       float: left;
+   }
+.cart-info-mobile:hover{
+    background-color:rgba(131, 11, 21, 0.9);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.cart{
+    right: 25%;
+}
+.show-cart {
+    width: 50%;
+  }
 }

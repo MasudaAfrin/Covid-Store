@@ -56,9 +56,17 @@ let totalQunatity = 0;
 let totalCost = 0;
 //showing cart
 const cartMainBtn = document.getElementById('cart-info');
+const cartMainBtnMob = document.getElementById('cart-info-mobile');
 const cart = document.getElementById('cart');
-    //press cart option
-    cartMainBtn.addEventListener('click',function(){
+//press cart option
+cartMainBtn.addEventListener('click',function(){
+        cart.classList.toggle('show-cart');
+        window.scrollTo(0,0);
+        if(showcartlist.length == 0){
+            container.innerHTML = "No product to show";
+        }
+    });
+cartMainBtnMob.addEventListener('click',function(){
         cart.classList.toggle('show-cart');
         window.scrollTo(0,0);
         if(showcartlist.length == 0){
@@ -186,19 +194,25 @@ function displayAllProducts(itemall){
      showItemsinCart(showcartlist);
   }
 
-//display in-cart function
+//display in-cart-nav-info function
 function displayinCart(){
-    //console.log(list);
     //fill cost in navbar and cart div
-    let totalContainer = document.querySelector('.cart-info p .item-total');
+    let totalContainer = document.querySelector('.item-total');
+    //for mobile and smaller devices
+    let totalContainerMob = document.querySelector('.item-total-mob');
     let totalCart = document.querySelector('.cart-total-container #cart-total');
     totalContainer.textContent = totalCost;
+    totalContainerMob.textContent = totalCost;
     totalCart.textContent = totalCost;
     //fill item in navbar
-    let itemContainer = document.querySelector('.cart-info p #item-count');
+    let itemContainer = document.querySelector('#item-count');
+    //for mobile and smaller devices
+    let itemContainerMob = document.querySelector('#item-count-mobile');
     itemContainer.textContent = totalQunatity;
+    itemContainerMob.textContent = totalQunatity;
     
 }
+//display added product in cart
 function showItemsinCart(listItem){
     var i=0;
     var j=0;
