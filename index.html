@@ -21,7 +21,7 @@
       <!-- header starts -->
     <header>
         <!-- nav starts -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light px-5 shadow-sm" id="navs">
             <a class="navbar-brand" href="#"><img src="images/covidlogo.png" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -46,8 +46,8 @@
                       <p class="mb-0">+880 1712222222</p>
                   </div>
                   <!--cart-->
-                  <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-3">
-                    <span class="cart-info-icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
+                  <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-2">
+                    <span class="cart-info-icon mr-lg-2"><i class="fas fa-shopping-cart"></i></span>
                     <p class="mb-0 text-capitalize"><span id="item-count">0</span> items - <span class="item-total">0</span> &#x9f3 </p>
                   </div>
               </div>
@@ -67,26 +67,18 @@
                 </div>
                 <!-- cart content part for add-to-cart-->
                 <div id="cart" class="cart">
-                    <div class="cart-item d-flex justify-content-around align-items-center">
-                        <img src="images/mask-1.jpg" class="rounded-circle" id="item-img" alt="cart-img" width="50px" height="50px">
-                        <!-- detail -->
-                        <div class="cart-item-text d-flex">
-                         <p id="cart-item-title" class="mb-0 text-capitalize">Surgical Mask with Nosebar &nbsp-
-                         </p>
-                         <span>&nbsp &#x9f3</span>
-                         <span class="cart-item-price mb-0" id="cart-item-price">10</span>
-                        </div>
-                        <a href="" class="cart-item-remove" id="cart=item-remove"><i class="fas fa-trash-alt"></i></a>
+                    <div class="allAdd">
+
                     </div>
                     <!-- for total -->
                     <div class="cart-total-container d-flex justify-content-around">
                         <h5>Total</h5>
-                        <h5>&#x9f3<span id="cart-total">8</span></h5>
+                        <h5>&#x9f3<span id="cart-total">0</span></h5>
                     </div>
                     <!--cart control-->
                     <div class="cart-control d-flex justify-content-around">
-                        <a href="" id="cart-items-clear" class="btn btn-outline-danger">Clear All</a>
-                        <a href="" id="checkout" class=" btn btn-outline-danger">Proceed</a>
+                        <span id="cart-items-clear" class="btn btn-outline-danger">Clear All</span>
+                        <span id="checkout" class=" btn btn-outline-danger">Proceed</span>
                     </div>
                    </div>
                      <!-- cart content part for add-to-cart ends-->
@@ -157,6 +149,7 @@
 
             <!-- items here -->
             <div class="row my-3 store-items" id="store-items">
+                
             </div>
             <!-- items here -->
         </div>
@@ -170,11 +163,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.js"></script>
-    <!--cart functionality-->
-    <script src="js/app.js"></script>
     <!-- default behaviour -->
     <script src="js/main.js"></script>
-    <!--product-filter-->
+    <!--product-filter and add-to-cart-->
     <script src="js/product-filter.js"></script>
+   
   </body>
 </html>
